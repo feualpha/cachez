@@ -1,11 +1,11 @@
-require "bundler/setup"
+require 'bundler/setup'
 require 'factory_bot'
-require "rimc"
+require 'rimc'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
-  config.example_status_persistence_file_path = ".rspec_status"
-  
+  config.example_status_persistence_file_path = '.rspec_status'
+
   # Config Factory Bot
   config.include FactoryBot::Syntax::Methods
   config.before(:suite) do

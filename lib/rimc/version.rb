@@ -1,3 +1,3 @@
-module Rimc
-  VERSION = "0.1.0"
+class Rimc
+  VERSION = '0.1.0'.freeze
 end

@@ -1,10 +1,10 @@
-RSpec.describe ::Rimc::CacheEntry do
+RSpec.describe Rimc::CacheEntry do
   describe '#expire?' do
     context 'nil expire time' do
-      let(:entry) {build(:cache_entry, :forever)}
+      let(:entry) { build(:cache_entry, :forever) }
       it { expect(entry.expired?).to be false }
     end
-    
+
     context 'not expired' do
       let(:expire_time) { Time.new(2018, 9, 26, 1, 1, 1) }
       let(:current_time) { Time.new(2018, 9, 26, 1, 1, 0) }
@@ -28,6 +28,5 @@ RSpec.describe ::Rimc::CacheEntry do
 
       it { expect(entry.expired?).to be true }
     end
-  end  
+  end
 end
-  
