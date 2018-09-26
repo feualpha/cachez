@@ -1,8 +1,6 @@
 # Rimc
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rimc`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Rimc is dead simple and stupid in memory cache implementation in ruby. It store the cached object in globa  l ruby hash and use lazy cache expiration.
 
 ## Installation
 
@@ -22,7 +20,25 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To set cache
+
+``` ruby
+Rimc.set('cache_key', 'cached object', 60) # Set cache ttl 60 seconds
+```
+
+To get the cached object
+``` ruby
+Rimc.get('cache_key') # => return the cached object
+```
+
+Or you can use it with block style
+```ruby
+Rimc.cache('cache_key', 60) do
+    do_something_first
+    and_then_do_this
+    and_done
+end
+```
 
 ## Development
 
@@ -32,12 +48,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/rimc. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/feualpha/rimc. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Rimc project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/rimc/blob/master/CODE_OF_CONDUCT.md).
