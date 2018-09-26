@@ -1,4 +1,5 @@
-# Rimc
+# Rimc 
+![travis-build](https://travis-ci.org/feualpha/rimc.svg?branch=master)
 
 Rimc is dead simple and stupid in memory cache implementation in ruby. It store the cached object in globa  l ruby hash and use lazy cache expiration.
 
