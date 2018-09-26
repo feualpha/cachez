@@ -34,9 +34,9 @@ Rimc.get('cache_key') # => return the cached object
 Or you can use it with block style
 ```ruby
 Rimc.cache('cache_key', 60) do
-    do_something_first
-    and_then_do_this
-    and_done
+  do_something_first
+  and_then_do_this
+  and_done
 end
 ```
 
