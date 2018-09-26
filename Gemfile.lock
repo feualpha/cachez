@@ -47,6 +47,8 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
+    rubocop-rspec (1.29.1)
+      rubocop (>= 0.58.0)
     ruby-progressbar (1.10.0)
     thread_safe (0.3.6)
     tzinfo (1.2.5)
@@ -63,6 +65,7 @@ DEPENDENCIES
   rimc!
   rspec (~> 3.0)
   rubocop (~> 0.59)
+  rubocop-rspec (~> 1.29)
 
 BUNDLED WITH
    1.16.2
